@@ -1,0 +1,473 @@
+/* ###################   Start public design ############### */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: changa;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+ul {
+    list-style: none !important;
+}
+a {
+    text-decoration: none !important;
+}
+
+@font-face {
+    font-family: changa;
+    src: url(./Changa-Regular.ttf);
+}
+
+:root {
+    --main-color: #21242b;
+    --sub-color: #007bff;
+    --danger-color: red;
+    --white-color: #fff;
+    --border-radius: 5px;
+    --content-color: #eaeaea;
+    --title-color: #7e7e7e;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+}
+
+.side-menu {
+    width: 300px !important;
+    background-color: white;
+    min-height: 100vh !important;
+    text-align: center;
+    padding: 5px;
+    transition: 0.2s ease;
+    border-left: 2px solid var(--content-color);
+    z-index: 9999;
+    position: relative;
+}
+
+/* ############### Start Side Menu Design ##############  */
+
+.side-menu.collapsed {
+    display: none;
+}
+
+.side-menu .CodeeWebb {
+    margin-top: 10px;
+    padding: 0 0;
+}
+
+.side-menu .CodeeWebb h5 {
+    font-family: Brush Script MT;
+    font-size: 2.7em;
+    color: var(--sub-color);
+    font-weight: 600;
+}
+
+.side-menu .CodeeWebb .c-w {
+    display: none;
+    font-size: 20px;
+}
+.side-menu .btn-collapse{
+    display: none;
+}
+
+.side-menu .code-logo {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.side-menu .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #01707e;
+}
+
+.side-menu .logo > span {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    margin: 0 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 10px 0 #00bcd4 inset;
+    background: none;
+    border-radius: 50%;
+    color: #01707e;
+    font-family: Brush Script MT;
+}
+
+/* .side-menu .menu-fixed{
+    position: fixed;
+} */
+.side-menu .nav-item {
+    width: 100%;
+    transition: 0.2s linear;
+}
+
+.side-menu ul > .nav-item {
+    margin-bottom: 5px;
+}
+
+.side-menu .nav-item .nav-link:hover {
+    background-color: var(--sub-color);
+    color: var(--white-color) !important;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.side-menu .nav-item .nav-link:hover i.icon-menu {
+    border-bottom-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.nav-item .nav-link .menu-title {
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+}
+
+.side-menu .nav-item .nav-link {
+    display: flex;
+    justify-content: right;
+    flex-direction: row-reverse;
+    align-items: center;
+    color: var(--main-color);
+    position: relative;
+    width: 100%;
+    transition: 0.5s linear;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.side-menu ul .sub-li-menu .nav-link {
+    padding: 5px 50px 0 0;
+    margin-top: 5px;
+}
+
+.side-menu .nav-item .nav-link.link-active {
+    color: var(--sub-color);
+}
+
+.side-menu ul > .nav-item .nav-link.active {
+    background-color: var(--sub-color);
+    color: var(--white-color);
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.side-menu ul > .nav-item .nav-link.active i.icon-menu {
+    color: var(--white-color) !important;
+    border-bottom-color: var(--white-color);
+}
+
+.side-menu ul .nav-item i.icon-menu {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    transition: 0.2s ease-out;
+    color: var(--sub-color);
+    border-radius: 50px;
+    border: 2px solid var(--sub-color);
+    border-top-color: transparent;
+    border-left-color: transparent !important;
+    border-right-color: transparent;
+    padding-bottom: 5px;
+}
+.nav-item .nav-link.active i.icon-menu {
+    border-left: 2px solid var(--white-color);
+}
+.side-menu ul .nav-item .nav-link .fa-chevron-down {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 10px;
+}
+
+@media (max-width: 576px) {
+    .side-menu {
+        width: 70px !important;
+        position: absolute;
+    }
+
+    .side-menu.width {
+        width: 200px !important;
+    }
+    .side-menu.width ul > .nav-item .nav-link span {
+        display: block;
+    }
+    .content {
+        margin-right: 70px;
+    }
+
+      .side-menu .btn-collapse {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 25px solid springgreen;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        top: 10px;
+        left: -50px;
+        z-index: 999;
+    }
+    
+    .btn-collapse i {
+        font-size: 20px;
+        color: var(--white-color);
+        cursor: pointer;
+        position: absolute;
+        /* display: none !important; */
+
+    }
+    .btn-collapse.change-arrow {
+        border-right-color: transparent !important;
+        border-left-color: springgreen;
+        left: 0;
+    }
+    .btn-collapse.change-arrow i:nth-child(2) {
+        display: block;
+        left: -30px;
+    }
+
+     .side-menu.width .sub-li-menu{
+         display: block;
+     }
+     
+    .side-menu.collapsed,
+    .side-menu .CodeeWebb .c-w,
+    .side-menu.width li span,
+    .side-menu.width i.fa-chevron-down {
+        display: block;
+    }
+
+    .btn-collapse i:nth-child(2),
+    /* .btn-collapse.change-arrow i:nth-child(1), */
+    .side-menu .code-logo,
+    .btn-collapse,
+    .header .fa-bars,
+    .side-menu .CodeeWebb .Code-Web,
+    .side-menu ul > .nav-item .nav-link span,
+    .side-menu ul li a > i.fa-chevron-down,
+    .sub-li-menu {
+        display: none;
+    }
+    .side-menu.width ul > .nav-item .nav-link {
+        display: flex;
+        justify-content: right;
+    }
+    .side-menu ul > .nav-item .nav-link {
+        display: flex;
+        justify-content: center;
+    }
+
+    .side-menu .nav-item .nav-link {
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+
+/* ############### End Side Menu Design ##############  */
+
+.sub-content {
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--content-color);
+    color: white;
+    border-radius: var(--border-radius);
+    min-height: 85vh;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), -2px 8px 15px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sub-content h2 {
+    text-align: right;
+    color: var(--main-color);
+    font-size: 1.2em;
+    border-right: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    border-bottom-right-radius: var(--border-radius);
+    padding: 10px;
+}
+
+/* ###################   End public design ############### */
+
+/* ======= Start header style ====== */
+
+.header {
+    width: 100%;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid var(--content-color);
+}
+
+.header .fa-bars {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--sub-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header .fa-bars:hover {
+    color: var(--main-color);
+    border-radius: var(--border-radius) !important;
+}
+
+.header .fa-bars:hover,
+.header .dropdown > button {
+    background-color: var(--sub-color) !important;
+}
+
+.header .dropdown > button {
+    color: white;
+    min-width: 150px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+}
+
+.header .dropdown button a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding: 4px;
+    transition: 0.4s ease-in-out;
+    font-size: 1.2em;
+}
+
+.dropdown .dropdown-menu button:hover .fa-sign-out,
+.dropdown .dropdown-menu button:hover .fa-arrow-left {
+    background-color: var(--danger-color);
+    color: var(--white-color);
+}
+
+/* ======= End header style ====== */
+
+/* ======= Start Form Public info ====== */
+.cd-data {
+    margin: 4%;
+    border-radius: var(--border-radius);
+    text-align: right;
+}
+.fm-data {
+    padding: 2%;
+    border-radius: var(--border-radius);
+}
+.fm-data .row {
+    flex-direction: row-reverse;
+}
+
+.fm-data input,
+.fm-data textarea {
+    background-color: #f8f8f8;
+    text-align: right;
+}
+
+.fm-data .btn {
+    border: 2px solid var(--sub-color);
+    padding: 0.3rem 0.75rem;
+    margin-top: 2%;
+}
+/* ======= End Form Public info ====== */
+
+/* ========= Start Design Data in Ul ====== */
+.cd-data .list-gp {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cd-data .row,
+.cd-data .oparation {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.cd-data .sub-list {
+    border-bottom: 2px solid var(--content-color);
+}
+
+.cd-data .sub-list li:nth-child(2) {
+    padding-right: 10px !important;
+    border-right: 2px solid var(--content-color);
+}
+
+.cd-data .list-gp > li {
+    width: 100%;
+}
+.cd-data .list-gp li .list-tm {
+    padding: 10px 0;
+}
+
+.sub-list button.btn {
+    border-width: 2px;
+    width: 100px;
+    margin-left: 10px;
+}
+@media (max-width: 768px) {
+    .sub-list button.btn {
+        margin-bottom: 10px;
+    }
+}
+.sub-list button a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sub-list button.btn-outline-danger a {
+    color: var(--danger-color);
+}
+.sub-list button:hover a {
+    color: white;
+}
+
+/* ========= End Design Data in Ul ====== */

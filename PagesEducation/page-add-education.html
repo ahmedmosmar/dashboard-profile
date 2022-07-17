@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- ===== Start  Side Menu ===== -->
+        <nav class="side-menu" id="main-menu">
+            <div class="CodeeWebb">
+                <h5>
+                    <span class="Code-Web">CodeeWebb</span>
+                    <span class="c-w">C W</span>
+                </h5>
+            </div>
+
+            <!-- ===== Logo Site ====  -->
+            <div class="code-logo">
+                <div class="logo">
+                    <span>c</span>
+                    <span>w</span>
+                </div>
+            </div>
+
+              <div class="btn-collapse">
+                <i class="fa fa-arrow-left"></i>
+                <i class="fa fa-arrow-right"></i>
+            </div>
+            
+            <!-- ==== NavBar List ==== -->
+            <ul class="nav list">
+
+                <!-- ==== Link Main Page ==== -->
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../index.html">
+                        <i class="fa fa-home icon-menu"></i>
+                        <span class="menu-title">الرئيسية</span>
+                    </a>
+                </li>
+
+                <!-- ==== Linkes Public Info ==== -->
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#public_info" aria-expanded="false"
+                        aria-controls="public_info">
+                        <i class="fa fa-sitemap icon-menu"></i>
+                        <span class="title"> المعلومات العامة</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="public_info">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesPublicInfo/page-add-public-info.html">إضــافة</a></li>
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesPublicInfo/page-show-public-info.html">عـــرض</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- ==== Linkes Education ==== -->
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#ecucation" aria-expanded="false"
+                        aria-controls="ecucation">
+                        <i class="fa fa-pencil icon-menu"></i>
+                        <span class="title"> التعليم والشهادات</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="ecucation">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesEducation/page-add-education.html">إضــافة</a></li>
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesEducation/page-show-education.html">عـــرض</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- ==== Linkes Work Experience ==== -->
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#work_experience" aria-expanded="false"
+                        aria-controls="work_experience">
+                        <i class="fa fa-gears icon-menu"></i>
+                        <span class="title"> الخبرات العملية</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="work_experience">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesWorkExperience/page-add-experience.html">إضــافة</a></li>
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesWorkExperience/page-show-experience.html">عـــرض</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- ==== Linkes Projects ==== -->
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#finshed_projects" aria-expanded="false"
+                        aria-controls="finshed_projects">
+                        <i class="fa fa-check icon-menu"></i>
+                        <span class="title"> المشاريع المنفذة</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="finshed_projects">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesProjectsDone/page-add-project.html">إضــافة</a></li>
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesProjectsDone/page-show-projects.html">عـــرض</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- ==== Linkes Skills ==== -->
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#my_skills" aria-expanded="false"
+                        aria-controls="my_skills">
+                        <i class="fa fa-code icon-menu"></i>
+                        <span class="title"> مهاراتي </span>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="my_skills">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesSkills/page-add-skill.html">إضــافة</a></li>
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesSkills/page-show-skills.html">عـــرض</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- ==== Linkes Services ==== -->
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#services" aria-expanded="false"
+                        aria-controls="services">
+                        <i class="fa fa-wrench icon-menu"></i>
+                        <span class="title"> خدماتي </span>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="services">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesServices/page-add-services.html">إضــافة</a></li>
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesServices/page-show-services.html">عـــرض</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- ==== Linkes Language==== -->
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#langs" aria-expanded="false"
+                        aria-controls="langs">
+                        <i class="fa fa-text-height icon-menu"></i>
+                        <span class="title"> اللغات </span>
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="langs">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesLanguage/page-add-lang.html">إضــافة</a></li>
+                            <li class="nav-item sub-li-menu"> <a class="nav-link"
+                                    href="../PagesLanguage/page-show-langs.html">عـــرض</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- ===== End  Side Menu ===== -->
+
+        <!-- ===== Start Main Content ===== -->
+        <main class="content" id="main_content">
+            <!-- === Start Header === -->
+            <header class="header">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+                        Ahmed Mosmar
+                    </button>
+
+                    <div class="dropdown-menu">
+                        <button class="btn box-logout dropdown-item" id="logout">
+                            <i class="fa fa-arrow-left"></i>
+                            <span>تسجيل خروج</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <i id="collapse-menu" class="fa fa-bars"></i>
+                </div>
+            </header>
+            <!-- === End Header === -->
+
+            <!-- === Start Content === -->
+
+            <!-- ==== Card Education ==== -->
+            <div class="card cd-data">
+                <div class="card-header">(الشهادات) التعليم</div>
+                <div class="card-body">
+                    <!-- ==== Start Form Education ==== -->
+                    <form action="" class="fm-data">
+                        <div class="row">
+
+                            <!-- ==== Input Education  Name ==== -->
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for=""> إسم الجهة التعليمية </label>
+                                    <input type="text" class="form-control" required placeholder="ادخل  الجهة من فصلك ">
+                                </div>
+                            </div>
+
+
+                            <!-- ==== Input trake  Name ==== -->
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for=""> إسم التخصص والمجال </label>
+                                    <input type="text" class="form-control" required
+                                        placeholder="ادخل  التخصص من فصلك  ">
+                                </div>
+                            </div>
+
+                            <!-- ==== Input File certification ==== -->
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for=""> الشهادة </label>
+                                    <input type="text" class="form-control" required
+                                        placeholder="إحتر الشهادة من فصلك  ">
+                                </div>
+                            </div>
+
+                            <!-- ==== Input From Date  ==== -->
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for=""> من تاريخ</label>
+                                    <input type="date" class="form-control" required
+                                        placeholder="ادخل  التاريخ من فصلك ">
+                                </div>
+                            </div>
+
+                            <!-- ==== Input To Date ==== -->
+                            <div class="col-md-6 col-sm-12">
+                                <div class="form-group">
+                                    <label for=""> الي تاريخ</label>
+                                    <input type="date" class="form-control" required
+                                        placeholder="ادخل  التاريخ من فصلك ">
+                                </div>
+                            </div>
+
+                            <!-- ==== Buttom Submit Data  ==== -->
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-outline-primary">
+                                    <i class="fa fa-send"></i>
+                                    <span>إرســال</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- ==== End Form Education ==== -->
+                </div>
+            </div>
+            <!-- === End Content === -->
+        </main>
+    </div>
+
+    <script src="../js/popper.js"></script>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
